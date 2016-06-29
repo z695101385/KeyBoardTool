@@ -12,6 +12,8 @@
 ```objc
 _kt = [ZCKeyboardToolBar keyboardWithFieldArray:@[_textFieldOne,_textFieldTwo,_textFieldThree,_textFieldFour]];
 ```
+3、完成
+
 控制器代码
 ```objc
 #import "ViewController.h"
