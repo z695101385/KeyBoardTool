@@ -14,7 +14,7 @@ _kt = [ZCKeyboardToolBar keyboardWithFieldArray:@[_textFieldOne,_textFieldTwo,_t
 ```
 3、完成
 
-控制器代码
+一份完整的控制器代码例子
 ```objc
 #import "ViewController.h"
 #import "ZCKeyboardToolBar.h"
