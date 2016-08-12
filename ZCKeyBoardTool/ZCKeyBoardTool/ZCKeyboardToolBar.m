@@ -37,8 +37,11 @@
         textField.inputAccessoryView = Ktb;
     }
     
+    [[NSNotificationCenter defaultCenter] addObserver:Ktb selector:@selector(keyboardWasShown) name:UIKeyboardWillShowNotification object:nil];
+    
     return Ktb;
 }
+
 /**
  *  上一文本框
  */
@@ -105,7 +108,7 @@
 /**
  *  即将出现时，检测状态
  */
-- (void)willMoveToSuperview:(UIView *)newSuperview
+- (void)keyboardWasShown
 {
     for (UITextField *text in _fieldArr) {
         if ([text isFirstResponder]) {
@@ -115,5 +118,12 @@
     }
     [self checkButtonStatus];
 }
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
 
 @end
